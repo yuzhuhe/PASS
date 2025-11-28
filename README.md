@@ -17,8 +17,10 @@ Evaluated on the **fastMRI benchmark** (Brain T1w, FLAIR, and Knee PD) augmented
 ## 🧭 Framework Overview
 
 Overview of the **PASS** closed-loop pipeline for personalized, fast MRI. The Vision-Language Model (VLM) guides both the anomaly-aware sampling and the deep unrolling reconstruction to prioritize clinically relevant features. 
----
 
+framework of the DIReCT++
+![framework](assets/framework.pdf)
+---
 ## 📦 Package Dependencies
 
 The dependencies for the PASS implementation are listed below. Please ensure you install all required packages.
@@ -102,4 +104,5 @@ The custom-processed data and the full implementation of the PASS framework are 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
 
 Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
 
