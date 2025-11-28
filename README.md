@@ -2,15 +2,15 @@
 
 ## 🔍 Description
 
-**PASS (Personalized, Anomaly-aware Sampling and reconStruction)** is an intelligent and **personalized** framework for **accelerated Magnetic Resonance Imaging (MRI)**. [cite_start]It addresses the critical limitation of traditional fast MRI methods—their lack of adaptability to patient-specific pathologies—by leveraging a **Vision-Language Model (VLM)** to guide the entire imaging pipeline[cite: 42, 158].
+**PASS (Personalized, Anomaly-aware Sampling and reconStruction)** is an intelligent and **personalized** framework for **accelerated Magnetic Resonance Imaging (MRI)**. It addresses the critical limitation of traditional fast MRI methods—their lack of adaptability to patient-specific pathologies—by leveraging a **Vision-Language Model (VLM)** to guide the entire imaging pipeline.
 
 PASS establishes a **closed-loop system** for fast MRI that achieves:
 
-* [cite_start]**Personalized Acquisition:** An **Anomaly-aware Sampling Module** dynamically generates patient-specific k-space trajectories[cite: 44, 496, 500].
-* [cite_start]**Task-Oriented Reconstruction:** A physics-informed **Deep Unrolling Network** is guided by an anomaly-aware prior extracted from a VLM (fine-tuned **NetAD**) to selectively enhance pathological features[cite: 43, 45, 496].
-* [cite_start]**Superior Clinical Utility:** It achieves superior image quality, especially within lesion regions, and directly translates to improvements in downstream diagnostic tasks, such as **fine-grained anomaly detection** and **diagnosis**[cite: 46, 50].
+* **Personalized Acquisition:** An **Anomaly-aware Sampling Module** dynamically generates patient-specific k-space trajectories
+* **Task-Oriented Reconstruction:** A physics-informed **Deep Unrolling Network** is guided by an anomaly-aware prior extracted from a VLM (fine-tuned **NetAD**) to selectively enhance pathological features.
+* **Superior Clinical Utility:** It achieves superior image quality, especially within lesion regions, and directly translates to improvements in downstream diagnostic tasks, such as **fine-grained anomaly detection** and **diagnosis**.
 
-[cite_start]Evaluated on the **fastMRI benchmark** (Brain T1w, FLAIR, and Knee PD) augmented with **fastMRI+** anomaly labels, PASS demonstrates robust performance across diverse anatomies, contrasts, and acceleration factors ($4\times$ and $8\times$) [cite: 172-174, 191].
+Evaluated on the **fastMRI benchmark** (Brain T1w, FLAIR, and Knee PD) augmented with **fastMRI+** anomaly labels, PASS demonstrates robust performance across diverse anatomies, contrasts, and acceleration factors ($4\times$ and $8\times$).
 
 ---
 
@@ -102,3 +102,4 @@ The custom-processed data and the full implementation of the PASS framework are 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
 
 Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
