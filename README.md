@@ -34,12 +34,12 @@ The PASS framework is trained and evaluated using publicly available datasets:
 
 ### 🔹 Preprocessing Pipeline
 
-[cite_start]The following steps were used for data preparation [cite: 841-846]:
+The following steps were used for data preparation:
 
-1.  [cite_start]**Coil Sensitivity Maps:** Estimated using the **ESPIRIT algorithm**[cite: 841].
-2.  **Brain Scan Standardization:** T1-weighted (T1w) and FLAIR contrasts. [cite_start]Raw k-space data were transformed to the image domain, uniformly **cropped to $320 \times 320$ pixels**, and corresponding k-space and coil sensitivity maps were simulated from these cropped images [cite: 842-844].
-3.  [cite_start]**Knee Scan Standardization:** Proton-density (PD) images were used, consistent with the original $320 \times 320$ acquisition protocol[cite: 842, 846].
-4.  [cite_start]**Anomaly Labels:** For brain scans, image-level labels were derived from study-level fastMRI+ annotations to indicate the presence of lesions[cite: 851, 852].
+1.  **Coil Sensitivity Maps:** Estimated using the **ESPIRIT algorithm**.
+2.  **Brain Scan Standardization:** T1-weighted (T1w) and FLAIR contrasts. Raw k-space data were transformed to the image domain, uniformly **cropped to $320 \times 320$ pixels**, and corresponding k-space and coil sensitivity maps were simulated from these cropped images.
+3.  **Knee Scan Standardization:** Proton-density (PD) images were used, consistent with the original $320 \times 320$ acquisition protocol.
+4.  **Anomaly Labels:** For brain and knee scans, image-level labels were derived from study-level fastMRI+ annotations to indicate the presence of lesions.
 
 ---
 
@@ -92,6 +92,7 @@ The custom-processed data and the full implementation of the PASS framework are 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
 
 Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
 
 
 
