@@ -69,17 +69,17 @@ $$
 $$
 
 * **Total Stages:** The network is unrolled for **three iterations**, with parameters shared across stages.
-* **Components:** Each stage includes a **Global Image Denoising Module** and a **Personalized Anomaly-Aware Module (PA)**, the latter integrating the VLM-derived attention map ($map=Net_{AD}(X_{global}^{(K)})$).
+* **Components:** Each stage includes a **Global Image Denoising Module** and a **Personalized Anomaly-Aware Module (PA)**, the latter integrating the VLM-derived attention map ($map=Net_{AD}(X_{global}^{(K)}$).
 
 ### 🔹 Training the Adaptive Sampling Module
 
-[cite_start]The learnable sampling mask $M_{\Phi}$ is optimized in a two-stage process [cite: 694-695]:
+The learnable sampling mask $M_{\Phi}$ is optimized in a two-stage process:
 
-1.  [cite_start]**Population-Level Prior:** A baseline probabilistic sampling mask $M_{\Phi}$ and the reconstructor $R_{\Theta}$ are learned using the LOUPE paradigm [cite: 716-717].
-2.  [cite_start]**Personalized Sampling:** With $R_{\Theta}$ fixed, an **Anomaly-aware Sampling network (AS)** generates a high-frequency sampling component $M_{\Phi}^{2}$ based on a low-resolution prior (Auto-Calibrating Signal, ACS) and VLM-guided feedback [cite: 718-720, 722]. [cite_start]The loss function explicitly includes an anomaly-specific k-space consistency term to ensure high-frequency pathological information is preserved[cite: 724]:
+1.  **Population-Level Prior:** A baseline probabilistic sampling mask $M_{\Phi}$ and the reconstructor $R_{\Theta}$ are simutenously learned using the LOUPE paradigm.
+2.  **Personalized Sampling:** With $R_{\Theta}$ fixed, an **Anomaly-aware Sampling network (AS)** generates a high-frequency sampling component $M_{\Phi}^{2}$ based on a low-resolution prior (Auto-Calibrating Signal, ACS) and VLM-guided feedback. The loss function explicitly includes an anomaly-specific k-space consistency term to ensure high-frequency pathological information is preserved:
 
 $$
-[cite_start]\mathcal{L}_{mask}=||X^{(K)}-X^{(gt)}||_{2}^{2}+\lambda||map\odot(\mathcal{F}^{H}(M_{\Phi}^{2}\odot\mathcal{F}(X^{(K)}))-\mathcal{F}^{H}(M_{\Phi^{\prime}}^{2}\odot\mathcal{F}(X^{(gt)})))||_{2}^{2} \quad \text{[cite: 725]}
+\mathcal{L}_{mask}=||X^{(K)}-X^{(gt)}||_{2}^{2}+\lambda||map\odot(\mathcal{F}^{H}(M_{\Phi}^{2}\odot\mathcal{F}(X^{(K)}))-\mathcal{F}^{H}(M_{\Phi^{\prime}}^{2}\odot\mathcal{F}(X^{(gt)})))||_{2}^{2} \quad \text{}
 $$
 
 ---
@@ -88,10 +88,11 @@ $$
 
 The custom-processed data and the full implementation of the PASS framework are publicly available.
 
-* [cite_start]**Codebase:** [https://github.com/ladderlab-xjtu/PASS](https://github.com/ladderlab-xjtu/PASS) [cite: 875]
-* [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
+* [cite_start]**Codebase:** [https://github.com/ladderlab-xjtu/PASS](https://github.com/ladderlab-xjtu/PASS) 
+* [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS)
 
-Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
+
 
 
 
