@@ -22,19 +22,6 @@ Overview of the **PASS** closed-loop pipeline for personalized, fast MRI. The Vi
 ![framework of the PASS](assets/framework.png)
 
 ---
-## 📦 Package Dependencies
-
-The dependencies for the PASS implementation are listed below. Please ensure you install all required packages.
-
-| **Package** | **Version** | **Package** | **Version** |
-| :--- | :--- | :--- | :--- |
-| Python | *(Specify version)* | PyTorch | *(Specify version)* |
-| CUDA | 11.8 (or compatible) | Adam Optimizer | [cite_start]N/A (Used for optimization) [cite: 740] |
-| fastMRI | [cite_start]N/A (Dataset source) [cite: 865] | fastMRI+ | [cite_start]N/A (Annotation source) [cite: 866] |
-| CLIP | [cite_start]N/A (VLM backbone) [cite: 190, 598] | ESPIRIT | [cite_start]N/A (Coil sensitivity estimation) [cite: 841] |
-| NumPy | *(Specify version)* | SciPy | *(Specify version)* |
-
----
 
 ## 🗂 Step 1. Data Preparation
 
@@ -105,6 +92,7 @@ The custom-processed data and the full implementation of the PASS framework are 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
 
 Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
 
 
 
