@@ -51,7 +51,7 @@ The core semantic guidance in PASS comes from a fine-tuned VLM, **NetAD**, adapt
 * **Adapters:** Lightweight adapters are inserted after the image encoder's feature layers for medical domain adaptation.
     * **Pixel-Level Adapter (PLA):** Learns **fine-grained localization** (trained with bounding-box supervision).
     * **Image-Level Adapter (ILA):** Captures **global pathology-relevant cues** (trained with image-level labels).
-* **Input Data:** The VLM is fine-tuned on each dataset using **12 annotated cases** containing both pixel-level bounding boxes and image-level lesion labels.
+* **Input Data:** The VLM is fine-tuned on each dataset using **[12 annotated cases](memory_bank/)** containing both pixel-level bounding boxes and image-level lesion labels.
 * **Output:** The fine-tuned VLM (NetAD) generates an **Anomaly Attention Map** from intermediate image estimates, which serves as the **anomaly-aware prior** for sampling and reconstruction.
 
 ---
@@ -92,6 +92,7 @@ The custom-processed data and the full implementation of the PASS framework are 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
 
 Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
 
 
 
