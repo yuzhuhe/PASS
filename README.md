@@ -45,14 +45,14 @@ The following steps were used for data preparation:
 
 ## 🧠 Step 2. VLM Fine-tuning (NetAD)
 
-[cite_start]The core semantic guidance in PASS comes from a fine-tuned VLM, **NetAD**, adapted from a CLIP-based architecture for anomaly detection[cite: 159, 190, 593, 598].
+The core semantic guidance in PASS comes from a fine-tuned VLM, **NetAD**, adapted from a CLIP-based architecture for anomaly detection.
 
-* [cite_start]**Backbone:** CLIP encoders are **frozen** to retain broad semantic knowledge[cite: 599].
-* [cite_start]**Adapters:** Lightweight adapters are inserted after the image encoder's feature layers for medical domain adaptation[cite: 600].
-    * [cite_start]**Pixel-Level Adapter (PLA):** Learns **fine-grained localization** (trained with bounding-box supervision)[cite: 604, 609, 610].
-    * [cite_start]**Image-Level Adapter (ILA):** Captures **global pathology-relevant cues** (trained with image-level labels)[cite: 609, 610].
-* [cite_start]**Input Data:** The VLM is fine-tuned on each dataset using **12 annotated cases** containing both pixel-level bounding boxes and image-level lesion labels[cite: 746].
-* [cite_start]**Output:** The fine-tuned VLM (NetAD) generates an **Anomaly Attention Map** from intermediate image estimates, which serves as the **anomaly-aware prior** for sampling and reconstruction[cite: 593, 610, 747].
+* **Backbone:** CLIP encoders are **frozen** to retain broad semantic knowledge.
+* **Adapters:** Lightweight adapters are inserted after the image encoder's feature layers for medical domain adaptation.
+    * **Pixel-Level Adapter (PLA):** Learns **fine-grained localization** (trained with bounding-box supervision).
+    * **Image-Level Adapter (ILA):** Captures **global pathology-relevant cues** (trained with image-level labels).
+* **Input Data:** The VLM is fine-tuned on each dataset using **12 annotated cases** containing both pixel-level bounding boxes and image-level lesion labels.
+* **Output:** The fine-tuned VLM (NetAD) generates an **Anomaly Attention Map** from intermediate image estimates, which serves as the **anomaly-aware prior** for sampling and reconstruction.
 
 ---
 
@@ -68,7 +68,7 @@ $$
 [cite_start]\mathcal{L}_{Rec}=\gamma_{1}||X_{global}^{(K)}-X^{(gt)}||_{2}^{2}+\gamma_{2}||X^{(K)}-X^{(gt)}||_{2}^{2}+\gamma_{3}||map*(X^{(K)}-X^{(gt)})||_{2}^{2} \quad \text{[cite: 690]}
 $$
 
-* [cite_start]**Total Stages:** The network is unrolled for **three iterations**, with parameters shared across stages[cite: 741].
+* [cite_start]**Total Stages:** The network is unrolled for **three iterations**, with parameters shared across stages.
 * [cite_start]**Components:** Each stage includes a **Global Image Denoising Module** and a **Personalized Anomaly-Aware Module (PA)**, the latter integrating the VLM-derived attention map ($map=Net_{AD}(X_{global}^{(K)})$)[cite: 189, 642, 653, 691].
 
 ### 🔹 Training the Adaptive Sampling Module
@@ -92,6 +92,7 @@ The custom-processed data and the full implementation of the PASS framework are 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
 
 Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
 
 
 
