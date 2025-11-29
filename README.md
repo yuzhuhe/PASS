@@ -29,8 +29,8 @@ Overview of the **PASS** closed-loop pipeline for personalized, fast MRI. The Vi
 
 The PASS framework is trained and evaluated using publicly available datasets:
 
-* [cite_start]**Multi-coil Brain and Knee MRI Data:** Sourced from the **fastMRI dataset** ([https://fastmri.org/](https://fastmri.org/))[cite: 840, 865].
-* [cite_start]**Pathological Annotations:** Sourced from the **fastMRI+ dataset** ([https://github.com/microsoft/fastmri-plus](https://github.com/microsoft/fastmri-plus)), which provides lesion types and bounding box coordinates[cite: 850, 866].
+* **Multi-coil Brain and Knee MRI Data:** Sourced from the **fastMRI dataset** ([https://fastmri.org/](https://fastmri.org/)).
+* **Pathological Annotations:** Sourced from the **fastMRI+ dataset** ([https://github.com/microsoft/fastmri-plus](https://github.com/microsoft/fastmri-plus)), which provides lesion types and bounding box coordinates.
 
 ### 🔹 Preprocessing Pipeline
 
@@ -92,6 +92,7 @@ The custom-processed data and the full implementation of the PASS framework are 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
 
 Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
 
 
 
