@@ -62,14 +62,14 @@ The full PASS framework is trained end-to-end to jointly optimize the VLM-guided
 
 ### 🔹 Training the Reconstruction Network
 
-[cite_start]The reconstruction network $R_{\Theta}$ is a deep unrolling architecture that minimizes a loss balancing data fidelity, a global image prior, and the VLM-guided anomaly-aware regularizer[cite: 612, 614, 617, 682]:
+The reconstruction network $R_{\Theta}$ is a deep unrolling architecture that minimizes a loss balancing data fidelity, a global image prior, and the VLM-guided anomaly-aware regularizer:
 
 $$
-[cite_start]\mathcal{L}_{Rec}=\gamma_{1}||X_{global}^{(K)}-X^{(gt)}||_{2}^{2}+\gamma_{2}||X^{(K)}-X^{(gt)}||_{2}^{2}+\gamma_{3}||map*(X^{(K)}-X^{(gt)})||_{2}^{2} \quad \text{[cite: 690]}
+\mathcal{L}_{Rec}=\gamma_{1}||X_{global}^{(K)}-X^{(gt)}||_{2}^{2}+\gamma_{2}||X^{(K)}-X^{(gt)}||_{2}^{2}+\gamma_{3}||map*(X^{(K)}-X^{(gt)})||_{2}^{2} \quad \text{}
 $$
 
-* [cite_start]**Total Stages:** The network is unrolled for **three iterations**, with parameters shared across stages.
-* [cite_start]**Components:** Each stage includes a **Global Image Denoising Module** and a **Personalized Anomaly-Aware Module (PA)**, the latter integrating the VLM-derived attention map ($map=Net_{AD}(X_{global}^{(K)})$)[cite: 189, 642, 653, 691].
+* **Total Stages:** The network is unrolled for **three iterations**, with parameters shared across stages.
+* **Components:** Each stage includes a **Global Image Denoising Module** and a **Personalized Anomaly-Aware Module (PA)**, the latter integrating the VLM-derived attention map ($map=Net_{AD}(X_{global}^{(K)})$).
 
 ### 🔹 Training the Adaptive Sampling Module
 
@@ -92,6 +92,7 @@ The custom-processed data and the full implementation of the PASS framework are 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS) [cite: 869]
 
 Would you like me to elaborate on the quantitative results (PSNR/SSIM/AUC) for the downstream diagnostic tasks?
+
 
 
 
