@@ -79,7 +79,7 @@ The learnable sampling mask $M_{\Phi}$ is optimized in a two-stage process:
 2.  **Personalized Sampling:** With $R_{\Theta}$ fixed, an **Anomaly-aware Sampling network (AS)** generates a high-frequency sampling component $M_{\Phi}^{2}$ based on a low-resolution prior (Auto-Calibrating Signal, ACS) and VLM-guided feedback. The loss function explicitly includes an anomaly-specific k-space consistency term to ensure high-frequency pathological information is preserved:
 
 $$
-\mathcal{L}_{mask}=||X^{(K)}-X^{(gt)}||_{2}^{2}+\lambda||map\odot(\mathcal{F}^{H}(M_{\Phi}^{2}\odot\mathcal{F}(X^{(K)}))-\mathcal{F}^{H}(M_{\Phi^{\prime}}^{2}\odot\mathcal{F}(X^{(gt)})))||_{2}^{2} \quad \text{}
+\mathcal{L}_{mask}=||X^{(K)}-X^{(gt)}||_{2}^{2}+\lambda||map\odot(\mathcal{F}^{H}(M_{\Phi}^{2}\odot\mathcal{F}(X^{(K)}))-\mathcal{F}^{H}(M_{\Phi^{\prime}}^{2}\mathcal{F}(X^{(gt)})))||_{2}^{2} \quad \text{}
 $$
 
 ---
@@ -90,6 +90,7 @@ The custom-processed data and the full implementation of the PASS framework are 
 
 * [cite_start]**Codebase:** [https://github.com/ladderlab-xjtu/PASS](https://github.com/ladderlab-xjtu/PASS) 
 * [cite_start]**Data Archive:** [https://zenodo.org/records/PASS](https://zenodo.org/records/PASS)
+
 
 
 
